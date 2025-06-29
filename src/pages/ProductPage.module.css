@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+.image {
+  width: 300px;
+  height: auto;
+}
+.info {
+  max-width: 600px;
+}

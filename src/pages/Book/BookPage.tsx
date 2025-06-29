@@ -1,23 +1,18 @@
-import { useGetBookByIdQuery } from '../../entities/book/api/bookApi';
 import { useParams } from 'react-router-dom';
+import { useGetBookByIdQuery } from '../../entities/book/api/bookApi';
+import { BookDetails } from '../../entities/book/ui/BookDetails.tsx';
+import styles from './BookPage.module.css';
 
 export const BookPage = () => {
   const { id } = useParams<{ id: string }>();
   const { data: book, isLoading } = useGetBookByIdQuery(id || '');
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Загрузка книги...</div>;
   if (!book) return <div>Книга не найдена</div>;
 
   return (
-    <div>
-      <h1>{book.title}</h1>
-      <img src={book.image} alt={book.title} />
-      <p> {book.authors}</p>
-      <p> {book.price}</p>
-      <p> {book.subtitle}</p>
-      <a href={book.url} target="_blank" rel="noopener noreferrer">
-        Купить пока так
-      </a>
+    <div className={styles.bookPage}>
+      <BookDetails book={book} />
     </div>
   );
 };

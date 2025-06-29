@@ -1,12 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { baseApi } from '../shared/api/baseApi';
+import { bookApi } from '../shared/api/bookApi';
+import authReducer from '../features/auth/authSlice';
+import favoritesReducer from '../features/favorites/favoritesSlice';
+import cartReducer from '../features/cart/cartSlice';
 
 export const store = configureStore({
   reducer: {
-    [baseApi.reducerPath]: baseApi.reducer,
+    [bookApi.reducerPath]: bookApi.reducer,
+    auth: authReducer,
+    favorites: favoritesReducer,
+    cart: cartReducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(baseApi.middleware),
+    getDefaultMiddleware().concat(bookApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

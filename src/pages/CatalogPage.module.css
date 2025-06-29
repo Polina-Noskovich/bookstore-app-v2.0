@@ -1,0 +1,11 @@
+.container {
+  padding: 16px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.pagination {
+  margin-top: 16px;
+}
