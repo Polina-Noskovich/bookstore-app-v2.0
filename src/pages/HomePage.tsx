@@ -1,8 +1,6 @@
-import React from 'react';
 import { useGetNewBooksQuery } from '../shared/api/bookApi';
 import BookCard from '../widgets/BookCard';
 import styles from './HomePage.module.css';
-import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   const { data, error, isLoading } = useGetNewBooksQuery();

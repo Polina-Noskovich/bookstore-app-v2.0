@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../app/store';
 import { removeFavorite } from '../features/favorites/favoritesSlice';
@@ -10,7 +9,7 @@ export default function FavoritesPage() {
   const dispatch = useDispatch();
 
   if (items.length === 0) {
-    return <div>Список избранного пуст.</div>;
+    return <div>Список избранного пуст</div>;
   }
 
   return (

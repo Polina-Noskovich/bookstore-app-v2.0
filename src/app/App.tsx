@@ -11,7 +11,9 @@ import Header from '../widgets/Header/index';
 import { useSelector } from 'react-redux';
 import type { RootState } from './store';
 
-const PrivateRoute: React.FC<{ children: JSX.Element }> = ({ children }) => {
+const PrivateRoute: React.FC<{ children: React.JSX.Element }> = ({
+  children,
+}) => {
   const isLoggedIn = useSelector((state: RootState) => state.auth.isLoggedIn);
   return isLoggedIn ? children : <Navigate to="/login" replace />;
 };

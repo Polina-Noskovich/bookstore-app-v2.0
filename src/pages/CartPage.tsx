@@ -1,4 +1,3 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '../app/store';
 import { removeFromCart, clearCart } from '../features/cart/cartSlice';
@@ -10,7 +9,7 @@ export default function CartPage() {
   const dispatch = useDispatch();
 
   if (items.length === 0) {
-    return <div>Корзина пуста.</div>;
+    return <div>Корзина пуста</div>;
   }
 
   return (

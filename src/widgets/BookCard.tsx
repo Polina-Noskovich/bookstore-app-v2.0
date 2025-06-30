@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Book } from '../shared/api/bookApi';
 import { Link } from 'react-router-dom';
 import styles from './BookCard.module.css';

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Book } from '../../../shared/api/bookApi';
 import styles from './SearchResults.module.css';
 

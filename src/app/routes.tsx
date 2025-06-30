@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import HomePage from '../pages/HomePage';
 import CatalogPage from '../pages/CatalogPage';
@@ -8,7 +7,7 @@ import CartPage from '../pages/CartPage';
 import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 
-const PrivateRoute = ({ children }: { children: JSX.Element }) => {
+const PrivateRoute = ({ children }: { children: React.JSX.Element }) => {
   const isLoggedIn = false;
   return isLoggedIn ? children : <Navigate to="/login" replace />;
 };

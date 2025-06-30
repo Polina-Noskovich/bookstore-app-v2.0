@@ -3,15 +3,15 @@
   max-width: 600px;
   margin: 0 2rem;
   position: relative;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .searchForm {
   display: flex;
   align-items: center;
   width: 100%;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  transition: all 0.3s ease;
 }
 
 .searchIcon {
@@ -24,7 +24,6 @@
 }
 
 .searchInput {
-  flex: 1;
   padding: 0.8rem 1rem;
   background: rgba(255, 255, 255, 0);
   border: none;
@@ -32,7 +31,7 @@
   font-size: 1rem;
 }
 
-.searchForm:focus {
+.searchContainer:focus {
   background: rgba(255, 255, 255, 0);
   border-color: rgba(255, 255, 255, 0.3);
   outline: none;
