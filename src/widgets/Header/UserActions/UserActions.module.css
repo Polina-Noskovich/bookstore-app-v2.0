@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../../shared/fonts/Raleway-VariableFont_wght.ttf')
+    format('TrueType');
+}
+
 .actionsContainer {
   display: flex;
   align-items: left;
@@ -19,7 +25,7 @@
 }
 
 .actionItem:hover .icon {
-  color: #4da6ff;
+  color: #6c6c6c;
 }
 
 .badge {
@@ -45,9 +51,10 @@
 }
 
 .userName {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
   color: #bcda02;
-  font-family: Raleway;
+  font-family: 'Raleway';
 }
 
 .logoutButton {
@@ -76,12 +83,13 @@
   background: none;
   border: none;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   cursor: pointer;
   text-decoration: none;
   padding: 0.5rem 0.8rem;
   border-radius: 4px;
   transition: background 0.2s;
+  font-family: 'Poppins';
 }
 
 .loginButton:hover {
