@@ -1,8 +1,67 @@
-.container {
-  padding: 16px;
+@font-face {
+  font-family: 'Catallina';
+  src: url('../shared/fonts/Catallina.otf') format('opentype');
 }
-.list {
+
+.container {
+  padding: 0 16px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: 'Catallina';
+}
+
+.headerNews {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 15px;
+  font-family: 'Catallina';
+}
+
+.titleNews {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d1d1d;
+  margin: 0;
+  font-family: 'Catallina';
+}
+
+.viewAll {
+  font-size: 16px;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.viewAll:hover {
+  opacity: 0.8;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 24px 16px;
+}
+
+@media (min-width: 768px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 32px 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .list {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }

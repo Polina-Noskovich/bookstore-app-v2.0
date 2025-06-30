@@ -1,0 +1,86 @@
+.resultsContainer {
+  position: absolute;
+  top: 120%;
+  left: 5%;
+  right: 0;
+  background: #1a1a1a;
+  border: 1px solid #e7e7e7;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  max-height: 400px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resultItem {
+  border-bottom: 1px solid #333;
+}
+
+.resultItem:last-child {
+  border-bottom: none;
+}
+
+.resultButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  text-align: left;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.resultButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookTitle {
+  font-size: 0.95rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.bookPrice {
+  color: #ffffffad;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.loading,
+.noResults {
+  padding: 1.5rem;
+  text-align: center;
+  color: #aaa;
+}
+
+.seeAllButton {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: #ffffff8d;
+  font-weight: 500;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.seeAllButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

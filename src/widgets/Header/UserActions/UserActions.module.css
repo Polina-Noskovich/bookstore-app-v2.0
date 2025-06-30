@@ -1,0 +1,136 @@
+.actionsContainer {
+  display: flex;
+  align-items: left;
+  gap: 1rem;
+  width: 17%;
+}
+
+.actionItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+
+.actionItem:hover .icon {
+  color: #4da6ff;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: #e74c3c;
+  color: white;
+  font-size: 0.7rem;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.userName {
+  font-size: 1rem;
+  color: #bcda02;
+  font-family: Raleway;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.logoutButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.logoutButton .icon {
+  font-size: 1.3rem;
+}
+
+.loginButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.loginButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobileCatalog {
+  display: none;
+}
+
+.catalogIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.catalogIcon:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 992px) {
+  .actionsContainer {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .userName {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .actionItem:not(.loginButton) {
+    display: none;
+  }
+
+  .loginButton span {
+    display: none;
+  }
+
+  .mobileCatalog {
+    display: block;
+    margin-right: 0.5rem;
+  }
+}

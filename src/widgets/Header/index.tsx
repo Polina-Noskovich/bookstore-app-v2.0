@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import type { RootState } from '../../app/store';
-import SearchBar from './SearchBar';
-import Navigation from './Navigation';
-import AuthSection from './AuthSection';
+import Logo from './Logo';
+import Search from './Search';
+import CatalogButton from './CatalogButton';
+import UserActions from './UserActions';
 import MobileMenu from './MobileMenu';
 import styles from './Header.module.css';
 
@@ -21,20 +22,16 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logoWrapper} onClick={handleLogoClick}>
-          <span className={styles.logo}>Bookstore</span>
-        </div>
+        <Logo onClick={handleLogoClick} />
+        <Search />
 
-        <Navigation />
-        <SearchBar />
+        <CatalogButton />
 
-        <div className={styles.actionsContainer}>
-          <AuthSection />
-          <MobileMenu
-            isOpen={isMenuOpen}
-            toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
-          />
-        </div>
+        <UserActions />
+        <MobileMenu
+          isOpen={isMenuOpen}
+          toggleMenu={() => setIsMenuOpen(!isMenuOpen)}
+        />
       </div>
     </header>
   );

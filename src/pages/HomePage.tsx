@@ -2,20 +2,28 @@ import React from 'react';
 import { useGetNewBooksQuery } from '../shared/api/bookApi';
 import BookCard from '../widgets/BookCard';
 import styles from './HomePage.module.css';
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
   const { data, error, isLoading } = useGetNewBooksQuery();
 
   if (isLoading) {
-    return <div>Загрузка...</div>;
+    return <div>Loading...</div>;
   }
+
   if (error || !data) {
-    return <div>Ошибка при загрузке новинок</div>;
+    return <div>Error</div>;
   }
 
   return (
     <div className={styles.container}>
-      <h1>Новые книги</h1>
+      <div className={styles.header}>
+        <h1 className={styles.title}>IT Programming Computer Science Books</h1>
+      </div>
+      <div className={styles.headerNews}>
+        <h1 className={styles.titleNews}>New release</h1>
+      </div>
+
       <div className={styles.list}>
         {data.books.map((book) => (
           <BookCard key={book.isbn13} book={book} />
